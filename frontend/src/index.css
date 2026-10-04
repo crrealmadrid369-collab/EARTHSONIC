@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#030712] text-slate-100 antialiased overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom NASA Starfield Background */
+  .space-bg {
+    background-color: #030712;
+    background-image: 
+      radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 90px 40px, #00f2fe, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 230px 190px, #4facfe, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 310px 80px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 450px 220px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 520px 310px, #38bdf8, rgba(0,0,0,0)),
+      radial-gradient(1.5px 1.5px at 680px 150px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 790px 270px, #00f2fe, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 920px 180px, #ffffff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 1050px 340px, rgba(255,255,255,0.6), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 600px 400px;
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(12, 18, 40, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-glow {
+  background: rgba(12, 18, 40, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.15), 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+  background: rgba(17, 26, 54, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(22, 34, 70, 0.75);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+/* Leaflet Map Custom Space Styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #070b19 !important;
+  font-family: inherit;
+  border-radius: 0.75rem;
+}
+
+.leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35) brightness(0.7) !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070b19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}

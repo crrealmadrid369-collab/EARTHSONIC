@@ -1,0 +1,27 @@
+{
+  "name": "earthsonic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EarthSonic - Hear the Planet Change (NASA Space Apps Challenge 2026)",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "rundev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "lint": "npm --prefix frontend run lint",
+    "backend": "cd backend && venv\\Scripts\\python -m uvicorn main:app --reload --port 8000",
+    "backend:test": "cd backend && venv\\Scripts\\python -m pytest tests/",
+    "start": "npm --prefix frontend run dev"
+  },
+  "keywords": [
+    "nasa",
+    "spaceapps",
+    "sonification",
+    "earth-science",
+    "fastapi",
+    "react",
+    "vite"
+  ],
+  "author": "",
+  "license": "MIT"
+}
